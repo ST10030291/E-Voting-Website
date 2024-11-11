@@ -2,6 +2,72 @@ html {
   font-size: 14px;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 2rem;
+    background-color: #d0fef5;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.navbar .nav-links {
+    flex: 1;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: right;
+    gap: 2rem;
+    margin-inline-end:5rem;
+    color: black;
+}
+
+.navbar .nav-links a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navbar .nav-links a:hover {
+    color: black;
+}
+
+.navbar .nav-links a:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navbar .nav-links a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;

@@ -1,0 +1,38 @@
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\appsettings.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\E-Voting Application.staticwebassets.runtime.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\E-Voting Application.exe
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\E-Voting Application.deps.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\E-Voting Application.runtimeconfig.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\E-Voting Application.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\E-Voting Application.pdb
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.AssemblyInfoInputs.cache
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.AssemblyInfo.cs
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.csproj.CoreCompileInputs.cache
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.RazorAssemblyInfo.cache
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.RazorAssemblyInfo.cs
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.sourcelink.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets\msbuild.E-Voting Application.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets\msbuild.build.E-Voting Application.props
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.E-Voting Application.props
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.E-Voting Application.props
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\scopedcss\bundle\E-Voting Application.styles.css
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\scopedcss\projectbundle\E-Voting Application.bundle.scp.css
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\refint\E-Voting Application.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.pdb
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.genruntimeconfig.cache
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\ref\E-Voting Application.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\Firebase.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\LiteDB.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\System.Reactive.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\bin\Debug\net8.0\System.Runtime.InteropServices.WindowsRuntime.dll
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting Application.csproj.AssemblyReference.cache
+C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application\obj\Debug\net8.0\E-Voting.57249BAE.Up2Date

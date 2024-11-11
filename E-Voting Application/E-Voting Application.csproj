@@ -7,4 +7,8 @@
     <RootNamespace>E_Voting_Application</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
+  </ItemGroup>
+
 </Project>
