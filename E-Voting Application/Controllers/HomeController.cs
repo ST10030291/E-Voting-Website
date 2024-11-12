@@ -38,7 +38,7 @@ namespace E_Voting_Application.Controllers
             return View();
         }
 
-        public IActionResult ManageElection()
+        public IActionResult AddParty()
         {
             return View();
         }

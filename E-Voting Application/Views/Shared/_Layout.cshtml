@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - E_Voting_Application</title>
+    <title>@ViewData["Title"] - IEC Voting Platform</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/E_Voting_Application.styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
-
+    <link rel="icon" type="image/x-icon" href="~/Images/IEC_logo.png">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
  
         <div class="logo">
             <img src="/Images/IEC_logo.png" alt="App Logo">
-            <span>IEC Voting Platform</span>
+            <span class="logo_txt">IEC Voting Platform</span>
         </div>
 
         <!-- Navigation Links Centered in the Navbar -->
@@ -37,9 +37,21 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+@*     <footer style="background-color: #0072C6; color: white; padding: 20px 0; font-family: Arial, sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <p style="margin: 0; font-size: 14px;">&copy; 2024 IEC Voting Platform. All Rights Reserved.</p>
+            </div>
+            <div style="text-align: right;">
+                <a href="#" style="color: white; text-decoration: none; font-size: 14px; margin-right: 15px;">Privacy Policy</a>
+                <a href="#" style="color: white; text-decoration: none; font-size: 14px;">Terms & Conditions</a>
+            </div>
+        </div>
+        <div style="background-color: #666; color: white; padding: 10px 0; text-align: center; font-size: 12px;">
+            <p style="margin: 0;">Designed with care for secure elections. Powered by IEC Voting Platform.</p>
+        </div>
+    </footer> *@
 
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

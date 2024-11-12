@@ -7,6 +7,10 @@ body {
     margin: 0;
 }
 
+.logo_txt{
+    color:steelblue;
+}
+
 /* Navbar styling */
 .navbar {
     display: flex;
@@ -28,7 +32,7 @@ body {
 
 .navbar .logo img {
     height: 40px;
-    margin-right: 0.5rem;
+    margin-right: 2.5rem;
 }
 
 .navbar .nav-links {
@@ -38,7 +42,7 @@ body {
     justify-content: right;
     gap: 2rem;
     margin-inline-end:5rem;
-    color: black;
+    color: steelblue;
 }
 
 .navbar .nav-links a {
@@ -72,6 +76,7 @@ body {
 /* Login/Register Form Styling */
 .container {
     display: flex;
+    padding-left:200px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -83,7 +88,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #0072C6;
+    background-color: cornflowerblue;
     height: auto;
     width: auto;
     border: 2px solid gray;
@@ -101,7 +106,7 @@ body {
 .sub_title {
     font-weight: 600;
     margin: 5px 0;
-    color: white
+    color: black
 }
 
 .form_group {
@@ -162,6 +167,37 @@ body {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+/* Flexbox wrapper for form and SVG */
+.form_svg_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    width: auto; 
+}
+
+/* Styling for the quote area */
+.quote_area {
+    position: absolute;
+    left: -400px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    max-width: 300px; 
+    padding: 20px;
+    color: #666; 
+    font-size: 1.2em; 
+    font-style: italic;
+    border-left: 4px solid #0072C6; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+}
+
+/* Form styling */
+.form_area {
+    max-width: 400px; 
+    z-index: 1;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -169,4 +205,188 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.button {
+    background-image: linear-gradient(to right bottom, #D3D3D3, #D3D3D3, #D3D3D3, #D3D3D3, #D3D3D3);
+    border: none;
+    font-size: 1.2em;
+    border-radius: 0;
+    padding: 4px;
+    transition: border-top-left-radius 0.2s ease-in, border-top-right-radius 0.2s ease-in 0.15s, border-bottom-right-radius 0.2s ease-in 0.3s, border-bottom-left-radius 0.2s ease-in 0.45s, padding 0.2s ease-in;
+    position: relative;
+}
+
+.button__int {
+    background-color: lightgray; 
+    color: steelblue;
+    border-radius: 0;
+    padding: 10px 40px;
+    transition: all 0.2s ease-in, border-top-left-radius 0.2s ease-in, border-top-right-radius 0.2s ease-in 0.15s, border-bottom-right-radius 0.2s ease-in 0.3s, border-bottom-left-radius 0.2s ease-in 0.45s, padding 0.2s ease-in;
+    font-weight: 600;
+    z-index: -1;
+}
+
+.button:active .button__int {
+    padding: 10px 30px;
+}
+
+.button:hover {
+    border-radius: 1.5em;
+}
+
+    .button:hover .button__int {
+        border-radius: 1.3em;
+    }
+
+
+/* Profile Page */
+.profile-card {
+    width: 350px;
+    margin-left:30px;
+    margin-bottom:30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, cornflowerblue 30%, #4a69ac 90%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    color: #000;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.profile-bg {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid lightgray;
+    margin: 0 auto 10px;
+}
+
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.profile-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: snow;
+}
+
+.profile-role {
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+}
+
+.profile-info {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+    .profile-info li {
+        font-size: 0.9em;
+        margin: 5px 0;
+        color: white;
+    }
+
+        .profile-info li strong {
+            color: #000;
+        }
+
+/* Section Container */
+.section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Heading */
+.section-heading h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.line-dec {
+    width: 100px;
+    height: 3px;
+    background-color: cornflowerblue;
+    margin: 15px auto;
+}
+
+.section-heading span {
+    font-size: 18px;
+    color: #777;
+}
+
+.container_profile {
+    display:flex;
+    justify-content:center;
+    margin-right:250px;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }

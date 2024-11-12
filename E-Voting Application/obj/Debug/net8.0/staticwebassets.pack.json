@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\Images\\IEC_logo.png"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\nelson_mandela_voting.jpg",
+      "PackagePath": "staticwebassets\\Images\\nelson_mandela_voting.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\user_icon.png",
+      "PackagePath": "staticwebassets\\Images\\user_icon.png"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

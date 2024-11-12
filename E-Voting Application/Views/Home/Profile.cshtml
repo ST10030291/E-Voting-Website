@@ -4,3 +4,108 @@
 @{
     ViewData["Title"] = "Profile";
 }
+
+<!-- Profile card contents -->
+<div class="profile-card">
+    <div class="profile-bg"></div>
+    <div class="profile-content">
+        <div class="profile-pic">
+            <img src="~/Images/user_icon.png" alt="Profile Picture">
+        </div>
+        <div class="profile-details">
+            <h2 class="profile-name" id="profileName">Unknown User</h2>
+            <p class="profile-role" id="profileRole">Unkown User</p>
+            <ul class="profile-info">
+                <li><strong>ID Number:</strong> <span id="profileIdNumber">Unknown User</span></li>
+                <li><strong>Email:</strong> <span id="profileEmail">Unknown User</span></li>
+                <li><strong>Province:</strong> <span id="profileProvince">Unknown User</span></li>
+                <li><strong>Registration Status:</strong> <span id="registrationStatus">Not Registered</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- -->
+<section class="section1" data-section="section1">
+    <div class="container_profile">
+        <div class="section-heading">
+            <h2>2024 Democratic Elections</h2>
+            <div class="line-dec"></div>
+            <span>
+                Here are your available options...
+            </span>
+        </div>
+
+    </div>
+</section>
+<!-- Routes to the other pages/options -->
+
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyC01tpLg7LvB7yfTHtkB2-jfb9z-_2dA20",
+        authDomain: "e-voting-application-b782e.firebaseapp.com",
+        databaseURL: "https://e-voting-application-b782e-default-rtdb.firebaseio.com",
+        projectId: "e-voting-application-b782e",
+        storageBucket: "e-voting-application-b782e.appspot.com",
+        messagingSenderId: "942000114372",
+        appId: "1:942000114372:web:0c5ab2571efada94515791",
+        measurementId: "G-YHRLF496SD"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
+
+    // Auth Check
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const userRef = ref(database, 'users/' + user.uid);
+
+            get(userRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+
+                    // Display 
+                    document.getElementById("profileName").textContent = userData.name + " " + userData.surname || "Unknown User";
+                    document.getElementById("profileRole").textContent = userData.role || "Unknown User";
+                    document.getElementById("profileIdNumber").textContent = userData.idNumber || "Unknown User";
+                    document.getElementById("profileEmail").textContent = user.email || "Unknown User";
+                    document.getElementById("profileProvince").textContent = userData.province || "Unknown User";
+
+                    if (userData.role === "Voter") {
+                        document.getElementById("registrationStatus").textContent = "Registered";
+                    } else if (userData.role === "Admin") {
+                        document.getElementById("registrationStatus").textContent = "Admin";
+                    } else {
+                        document.getElementById("registrationStatus").textContent = "Not Registered";
+                    }
+                } else {
+
+                    document.getElementById("profileName").textContent = "Unknown User";
+                    document.getElementById("profileRole").textContent = "Unknown User";
+                    document.getElementById("profileIdNumber").textContent = "Unknown User";
+                    document.getElementById("profileEmail").textContent = "Unknown User";
+                    document.getElementById("profileProvince").textContent = "Unknown User";
+                    document.getElementById("registrationStatus").textContent = "Not Registered";
+                }
+            }).catch((error) => {
+                console.error("Error fetching user data:", error);
+            });
+        } else {
+
+            document.getElementById("profileName").textContent = "Unknown User";
+            document.getElementById("profileRole").textContent = "Unknown User";
+            document.getElementById("profileIdNumber").textContent = "Unknown User";
+            document.getElementById("profileEmail").textContent = "Unknown User";
+            document.getElementById("profileProvince").textContent = "Unknown User";
+            document.getElementById("registrationStatus").textContent = "Not Registered";
+        }
+    });
+</script>
