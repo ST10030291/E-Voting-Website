@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Images\IEC_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseAdmin" Version="3.1.0" />
+    <PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
   </ItemGroup>
 

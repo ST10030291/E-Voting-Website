@@ -14,12 +14,13 @@ body {
     align-items: center;
     font-family: 'Poppins', sans-serif;
     padding: 1rem 2rem;
-    background-color: #d0fef5;
+    background-color: white;
 }
 
 .navbar .logo {
     display: flex;
     align-items: center;
+    vertical-align:central;
     color: black;
     font-size: 1.5rem;
     font-weight: 600;
@@ -52,21 +53,104 @@ body {
     color: black;
 }
 
-.navbar .nav-links a:after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
+    .navbar .nav-links a:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #0072C6;
+        transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
 
 .navbar .nav-links a:hover:after {
     width: 100%;
     left: 0;
 }
+
+/* Login/Register Form Styling */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0072C6;
+    height: auto;
+    width: auto;
+    border: 2px solid gray;
+    border-radius: 20px;
+    box-shadow: 3px 4px 0px 1px lightgray;
+}
+
+.title {
+    color: white;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.sub_title {
+    font-weight: 600;
+    margin: 5px 0;
+    color: white
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px;
+}
+
+.form_style {
+    outline: none;
+    border: 2px solid gray;
+    box-shadow: 3px 4px 0px 1px gray;
+    width: 290px;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+    .form_style:focus, .btn:focus {
+        transform: translateY(4px);
+        box-shadow: 1px 2px 0px 0px black;
+    }
+
+.btn {
+    padding: 15px;
+    margin: 25px 0px;
+    width: 290px;
+    font-size: 20px;
+    background: lightgray;
+    border-radius: 10px;
+    font-weight: 800;
+    box-shadow: 3px 3px 0px 0px gray;
+}
+
+    .btn:hover {
+        background:gray;
+        color:white;
+    }
+
+.link {
+    font-weight: 800;
+    color: white;
+    padding: 5px;
+}
+
+    .link:hover {
+        color:black;
+    }
 
 @media (min-width: 768px) {
   html {

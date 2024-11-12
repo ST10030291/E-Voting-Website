@@ -1,0 +1,125 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Register Page";
+}
+
+@model E_Voting_Application.Models.User
+
+<div class="container">
+    <div class="form_area">
+        <p class="title">Register</p>
+        <form id="registerForm" asp-action="RegisterUserForm" asp-controller="UserAuth" method="post">
+            <div class="form_group">
+                <label class="sub_title" for="name">Name</label>
+                <input placeholder="Enter your name" class="form_style" type="text" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form_group">
+                <label class="sub_title" for="surname">Surname</label>
+                <input placeholder="Enter your surname" class="form_style" type="text" asp-for="Surname" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+
+            <div class="form_group">
+                <label class="sub_title" for="idNum">Identification Number</label>
+                <input placeholder="Enter your ID Number" class="form_style" type="number" asp-for="IdNumber" />
+                <span asp-validation-for="IdNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form_group">
+                <label class="sub_title" for="email">Email</label>
+                <input placeholder="Enter your email" class="form_style" type="email" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form_group">
+                <label class="sub_title" for="province">Province</label>
+                <select class="form_style" asp-for="Province">
+                    <option value="" disabled selected>Select a province</option>
+                    <option value="Eastern Cape">Eastern Cape</option>
+                    <option value="Free State">Free State</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Mpumalanga">Mpumalanga</option>
+                    <option value="North West">North West</option>
+                    <option value="Northern Cape">Northern Cape</option>
+                    <option value="Western Cape">Western Cape</option>
+                </select>
+                <span asp-validation-for="Province" class="text-danger"></span>
+            </div>
+
+            <div class="form_group">
+                <label class="sub_title" for="password">Password</label>
+                <input placeholder="Enter your password" class="form_style" type="password" asp-for="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form_group">
+                <label class="sub_title" for="passwordConfirmation">Confirm Password</label>
+                <input placeholder="Re-enter your password" class="form_style" type="password" asp-for="PasswordConfirmation" />
+                <span asp-validation-for="PasswordConfirmation" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button class="btn" type="submit">Sign Up</button>
+                <p style="color:white">Have an Account? <a class="link" asp-action="Login">Login Here</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyC01tpLg7LvB7yfTHtkB2-jfb9z-_2dA20",
+        authDomain: "e-voting-application-b782e.firebaseapp.com",
+        databaseURL: "https://e-voting-application-b782e-default-rtdb.firebaseio.com",
+        projectId: "e-voting-application-b782e",
+        storageBucket: "e-voting-application-b782e.firebasestorage.app",
+        messagingSenderId: "942000114372",
+        appId: "1:942000114372:web:0c5ab2571efada94515791",
+        measurementId: "G-YHRLF496SD"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Register User on Form Submit
+    document.getElementById('registerForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        // Get form values
+        const email = document.getElementById('Email').value;
+        const password = document.getElementById('Password').value;
+
+        try {
+            // Create user with Firebase Authentication
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            // Send email verification
+            await sendEmailVerification(user);
+            alert("Registration successful!");
+
+            // Optionally redirect after successful registration
+            window.location.href = "/UserAuth/Login"; // Redirect to login page
+        } catch (error) {
+            console.error(error.message);
+            alert("Error: " + error.message);
+        }
+    });
+</script>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

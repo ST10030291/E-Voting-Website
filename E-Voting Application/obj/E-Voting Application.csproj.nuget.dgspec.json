@@ -45,6 +45,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "FirebaseDatabase.net": {
               "target": "Package",
               "version": "[4.2.0, )"

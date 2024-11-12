@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3Jf8TASN4Ke3W0/kZwR8VdFHNHhzk53nLgM4cUvaql8=",
+  "Hash": "Wtch36hn/egLAdtIGf/QN/z5FNvmBZLiKAxZ/N/9+Fw=",
   "Source": "E-Voting Application",
   "BasePath": "_content/E-Voting Application",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\IEC_logo.png",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/IEC_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\IEC_logo.png"
     },
     {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\js\\site.js",

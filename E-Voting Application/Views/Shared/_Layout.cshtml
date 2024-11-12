@@ -14,17 +14,17 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <!-- Logo and App Name -->
+ 
         <div class="logo">
-            <img src="IEC_logo.png" alt="App Logo">
+            <img src="/Images/IEC_logo.png" alt="App Logo">
             <span>IEC Voting Platform</span>
         </div>
 
         <!-- Navigation Links Centered in the Navbar -->
         <div class="nav-links">
             <a  asp-controller="Home" asp-action="Index">Home</a>
-            <a asp-controller="Home" asp-action="Login">Login</a>
-            <a asp-controller="Home" asp-action="Register">Register</a>
+            <a asp-controller="UserAuth" asp-action="Login">Login</a>
+            <a asp-controller="UserAuth" asp-action="Register">Register</a>
             <!-- i need to make this link travel to about -->
             <a asp-controller="Home" asp-action="About">About</a>
             <a asp-controller="Home" asp-action="Profile">Profile</a>
@@ -38,9 +38,7 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - E_Voting_Application - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

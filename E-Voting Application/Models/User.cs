@@ -8,13 +8,16 @@ namespace E_Voting_Application.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string IdNumber { get; set; }
+        public string Surname { get; set; }
+        [Required]
+        public int IdNumber { get; set; }
         [Required]
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
         [Required]
-        public string Address { get; set; }
+        [Compare("Password", ErrorMessage = "Password and confirmation do not match.")]
+        public string PasswordConfirmation { get; set; }
         [Required]
         public string Province { get; set; }
         [Required]
