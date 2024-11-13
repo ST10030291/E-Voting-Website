@@ -32,13 +32,46 @@
             <h2>2024 Democratic Elections</h2>
             <div class="line-dec"></div>
             <span>
-                Here are your available options...
+                Here are your available options for the election...
             </span>
         </div>
-
     </div>
 </section>
 <!-- Routes to the other pages/options -->
+<div class="card-wrapper">
+    <!-- Admin-only card -->
+    <a asp-controller="Home" asp-action="AddElection" class="card-link" id="adminCard1">
+        <div class="card1">
+            <img src="~/Images/sa_flag_vote.jpg" alt="Avatar" style="width:100%">
+            <div class="container1">
+                <h4><b>Create upcoming Election</b></h4>
+                <p>Set up an upcoming online election with current parties..</p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Voter-only card -->
+    <a asp-controller="Home" asp-action="CastVote" class="card-link" id="voterCard1">
+        <div class="card1">
+            <img src="~/Images/hand_vote_box.png" alt="Avatar" style="width:100%">
+            <div class="container1">
+                <h4><b>Cast a Vote</b></h4>
+                <p>Registered voters can cast their votes online..</p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Admin-only card -->
+    <a asp-controller="Home" asp-action="AddParty" class="card-link" id="adminCard2">
+        <div class="card1">
+            <img src="~/Images/political_parties.jpg" alt="Avatar" style="width:100%">
+            <div class="container1">
+                <h4><b>Manage Political Parties</b></h4>
+                <p>Add or remove parties to the election database..</p>
+            </div>
+        </div>
+    </a>
+</div>
 
 
 <script type="module">
@@ -63,6 +96,10 @@
     const auth = getAuth(app);
     const database = getDatabase(app);
 
+    document.getElementById("adminCard1").style.display = "none";
+    document.getElementById("adminCard2").style.display = "none";
+    document.getElementById("voterCard1").style.display = "none";
+
     // Auth Check
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -78,6 +115,15 @@
                     document.getElementById("profileIdNumber").textContent = userData.idNumber || "Unknown User";
                     document.getElementById("profileEmail").textContent = user.email || "Unknown User";
                     document.getElementById("profileProvince").textContent = userData.province || "Unknown User";
+
+                    // Show cards based on role so if a user is not logged,
+                    // no cards will be shown hence stopping these users from accessing these features
+                    if (userData.role === "Admin") {
+                        document.getElementById("adminCard1").style.display = "block";
+                        document.getElementById("adminCard2").style.display = "block";
+                    } else if (userData.role === "Voter") {
+                        document.getElementById("voterCard1").style.display = "block";
+                    }
 
                     if (userData.role === "Voter") {
                         document.getElementById("registrationStatus").textContent = "Registered";
