@@ -9,9 +9,13 @@ namespace E_Voting_Application.Models
         public string PartyName { get; set; }
         [Required]
         public string PartyLeader { get; set; }
-        public int ElectionId { get; set; }
+        [Required]
+        public string JurisdictionLevel { get; set;} // Either national, provincial or both. 
         [Required]
         public int VoteCount { get; set; }
-        public string ImageUrl { get; set; }
+        [Required]
+        public string PartyImageUrl { get; set; }
+        [Required]
+        public string LeaderImageUrl { get; set; }
     }
 }

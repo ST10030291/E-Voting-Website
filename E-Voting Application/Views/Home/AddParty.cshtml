@@ -3,3 +3,180 @@
 *@
 @{
 }
+
+<div class="left-header1">
+    <h1>Add a Political Party</h1>
+</div>
+
+<div class="form-container3">
+    <!-- Img previews -->
+    <div class="preview-container">
+        <p><strong>Party Image Preview</strong></p>
+        <div id="partyLogoPreview" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+            <p> Logo Preview</p>
+        </div>
+        <div id="partyLeaderImagePreview" style="max-width: 200px; max-height: 200px;">
+            <p>Leader Preview</p>
+        </div>
+    </div>
+
+    <!-- form -->
+    <form id="registerParty" asp-action="RegisterPartyForm" asp-controller="Home" method="post" class="form2">
+        <p class="title2">Registration </p>
+        <p class="successMsg"> Success Message goes here</p>
+        <div class="flex2">
+            <label>
+                <input required="" name="partyName" placeholder="" type="text" class="input2" style="font-size:15px">
+                <span>Party Name</span>
+            </label>
+
+            <label>
+                <input required="" name="partyLeader" placeholder="" type="text" class="input2" style="font-size:15px">
+                <span>Party Leader</span>
+            </label>
+        </div>
+
+        <label>
+            <select name="jurisdictionLevel" class="form_style">
+                <option value="" disabled selected>Jurisdiction Level</option>
+                <option value="National">National</option>
+                <option value="Provincial">Provincial</option>
+                <option value="Both">Both</option>
+            </select>
+            <span class="text-danger"></span>
+        </label>
+        <br />
+        <label>
+            <input type="file" id="partyLogo" name="partyLogo" accept="image/jpg, image/jpeg, image/png">
+            <span style="font-size:13px;">Party Logo (jpg, .jpeg, .png only) </span>
+        </label>
+
+        <label>
+            <input type="file" id="partyLeaderImage" name="partyLeaderImage" accept="image/jpg, image/jpeg, image/png">
+            <span style="font-size:13px;">Party Leader Picture (jpg, .jpeg, .png only)</span>
+        </label>
+        <button class="submit2">Register Party</button>
+    </form>
+</div>
+
+
+<div class="left-header2">
+    <h2>Delete a Political Party</h2>
+</div>
+
+<div class="party-list">
+    <!-- Party items will be dynamically populated here -->
+</div>
+
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
+
+    // Firebase config
+    const firebaseConfig = {
+        apiKey: "AIzaSyC01tpLg7LvB7yfTHtkB2-jfb9z-_2dA20",
+        authDomain: "e-voting-application-b782e.firebaseapp.com",
+        databaseURL: "https://e-voting-application-b782e-default-rtdb.firebaseio.com",
+        projectId: "e-voting-application-b782e",
+        storageBucket: "e-voting-application-b782e.appspot.com",
+        messagingSenderId: "942000114372",
+        appId: "1:942000114372:web:0c5ab2571efada94515791",
+        measurementId: "G-YHRLF496SD"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+
+    // Preview the selected images before form submission
+    document.getElementById('partyLogo').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById('partyLogoPreview');
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = "Party Logo Preview";
+                previewContainer.innerHTML = ""; // Clear any previous preview
+                previewContainer.appendChild(img);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+
+    document.getElementById('partyLeaderImage').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById('partyLeaderImagePreview');
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = "Party Leader Image Preview";
+                previewContainer.innerHTML = ""; // Clear any previous preview
+                previewContainer.appendChild(img);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+
+    document.getElementById('registerParty').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        // Get form values
+        const partyName = document.querySelector('input[name="partyName"]').value;
+        const partyLeader = document.querySelector('input[name="partyLeader"]').value;
+        const jurisdictionLevel = document.querySelector('select[name="JurisdictionLevel"]').value;
+        const partyLogo = document.getElementById('partyLogo').files[0];
+        const partyLeaderImage = document.getElementById('partyLeaderImage').files[0];
+
+        // Validate images
+        if (!partyLogo || !partyLeaderImage) {
+            alert("Please upload both party logo and leader image.");
+            return;
+        }
+
+        try {
+            // Upload party logo and leader image to Firebase Storage
+            const partyLogoRef = ref(storage, 'party-logos/' + partyLogo.name);
+            const leaderImageRef = ref(storage, 'leader-images/' + partyLeaderImage.name);
+
+            // Upload files
+            const partyLogoSnapshot = await uploadBytes(partyLogoRef, partyLogo);
+            const leaderImageSnapshot = await uploadBytes(leaderImageRef, partyLeaderImage);
+
+            // Get download URLs for the images
+            const partyLogoUrl = await getDownloadURL(partyLogoSnapshot.ref);
+            const leaderImageUrl = await getDownloadURL(leaderImageSnapshot.ref);
+
+            // Create party document in Firestore
+            const partyRef = collection(db, 'parties');
+            await addDoc(partyRef, {
+                PartyName: partyName,
+                PartyLeader: partyLeader,
+                JurisdictionLevel: jurisdictionLevel,
+                VoteCount: 0, // Set initial vote count to 0
+                PartyImageUrl: partyLogoUrl,
+                LeaderImageUrl: leaderImageUrl
+            });
+
+            alert("Party registered successfully!");
+            window.location.href = "/path/to/party/list"; // Redirect after success
+
+        } catch (error) {
+            console.error("Error registering party:", error);
+            alert("Error registering party: " + error.message);
+        }
+    });
+</script>
+

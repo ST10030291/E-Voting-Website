@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("E-Voting Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2a5c34775a6542cc72e89c82611c9d7fe4b86c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d39d07a78c32bc9ee9c15b834bc256b9a20e96e")]
 [assembly: System.Reflection.AssemblyProductAttribute("E-Voting Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("E-Voting Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
