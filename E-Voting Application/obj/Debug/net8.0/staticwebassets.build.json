@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uBu6af+IHBqCJGwfIy5oKj+xbaD3q+bgWXNDwusRUC0=",
+  "Hash": "YaFi8QXuY7lKEKq5qmUGsruNVbkARNZpcbwQ7HghO3A=",
   "Source": "E-Voting Application",
   "BasePath": "_content/E-Voting Application",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\delete_icon.png",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/delete_icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\delete_icon.png"
     },
     {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\hand_vote_box.png",

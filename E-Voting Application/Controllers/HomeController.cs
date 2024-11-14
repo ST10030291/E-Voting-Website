@@ -23,22 +23,7 @@ namespace E_Voting_Application.Controllers
             return View();
         }
 
-        public IActionResult AddElection()
-        {
-            return View();
-        }
-
-        public IActionResult CastVote()
-        {
-            return View();
-        }
-
         public IActionResult Profile() 
-        {
-            return View();
-        }
-
-        public IActionResult AddParty()
         {
             return View();
         }

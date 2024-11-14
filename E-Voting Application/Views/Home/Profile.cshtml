@@ -40,7 +40,7 @@
 <!-- Routes to the other pages/options -->
 <div class="card-wrapper">
     <!-- Admin-only card -->
-    <a asp-controller="Home" asp-action="AddElection" class="card-link" id="adminCard1">
+    <a asp-controller="ElectionManagement" asp-action="AddElection" class="card-link" id="adminCard1">
         <div class="card1">
             <img src="~/Images/sa_flag_vote.jpg" alt="Avatar" style="width:100%">
             <div class="container1">
@@ -51,7 +51,7 @@
     </a>
 
     <!-- Voter-only card -->
-    <a asp-controller="Home" asp-action="CastVote" class="card-link" id="voterCard1">
+    <a asp-controller="ElectionManagement" asp-action="CastVote" class="card-link" id="voterCard1">
         <div class="card1">
             <img src="~/Images/hand_vote_box.png" alt="Avatar" style="width:100%">
             <div class="container1">
@@ -62,7 +62,7 @@
     </a>
 
     <!-- Admin-only card -->
-    <a asp-controller="Home" asp-action="AddParty" class="card-link" id="adminCard2">
+    <a asp-controller="ElectionManagement" asp-action="AddParty" class="card-link" id="adminCard2">
         <div class="card1">
             <img src="~/Images/political_parties.jpg" alt="Avatar" style="width:100%">
             <div class="container1">

@@ -19,12 +19,7 @@ namespace E_Voting_Application.Controllers
         [HttpPost]
         public IActionResult RegisterUserForm(Models.User user)
         {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Login");
-            }
-
-            return View("Register", user); 
+            return View();
         }
     }
 }

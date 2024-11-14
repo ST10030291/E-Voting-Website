@@ -13,7 +13,12 @@ body {
 
 /* Navbar styling */
 .navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1000;
     display: flex;
+    height: 65px;
     justify-content: space-between;
     align-items: center;
     font-family: 'Poppins', sans-serif;
@@ -106,7 +111,7 @@ body {
 .sub_title {
     font-weight: 600;
     margin: 5px 0;
-    color: black
+    color: white;
 }
 
 .form_group {
@@ -502,143 +507,84 @@ html {
         padding-left: 15px;
     }
 
-/* Form for profile routes */
-.form2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    background-color: #fff;
-    margin-top:80px;
-    padding: 20px;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.title2 {
-    font-size: 28px;
-    color: steelblue;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
+/* Form for add party page */
+.container4 {
     display: flex;
     align-items: center;
-    padding-left: 30px;
-}
-
-    .title2::before, .title2::after {
-        position: absolute;
-        content: "";
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        left: 0px;
-        background-color: steelblue;
-    }
-
-    .title2::before {
-        width: 18px;
-        height: 18px;
-        background-color: steelblue;
-    }
-
-    .title2::after {
-        width: 18px;
-        height: 18px;
-        animation: pulse 1s linear infinite;
-    }
-
-.message2, .signin2 {
-    color: rgba(88, 87, 87, 0.822);
-    font-size: 20px;
-}
-
-.signin2 {
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
 }
 
-    .signin2 a {
-        color: royalblue;
-    }
-
-        .signin2 a:hover {
-            text-decoration: underline royalblue;
-        }
-
-.flex2 {
+.form_areaa {
     display: flex;
-    width: 100%;
-    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: cornflowerblue;
+    height: auto;
+    width: auto;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 3px 4px 0px 1px lightgray;
 }
 
-.form2 label {
-    position: relative;
-}
-
-    .form2 label .input2 {
-        width: 100%;
-        padding: 10px 10px 20px 10px;
-        outline: 0;
-        border: 1px solid rgba(105, 105, 105, 0.397);
-        border-radius: 10px;
-    }
-
-        .form2 label .input2 + span {
-            position: absolute;
-            left: 10px;
-            top: 15px;
-            color: grey;
-            font-size: 0.7em;
-            cursor: text;
-            transition: 0.3s ease;
-        }
-
-        .form2 label .input2:placeholder-shown + span {
-            top: 15px;
-            font-size: 0.9em;
-        }
-
-        .form2 label .input2:focus + span, .form2 label .input2:valid + span {
-            top: 30px;
-            font-size: 0.7em;
-            font-weight: 600;
-        }
-
-        .form2 label .input2:valid + span {
-            color: green;
-        }
-
-.submit2 {
-    border: none;
-    outline: none;
-    background-color: #0077b6;
-    padding: 10px;
-    border-radius: 10px;
+.titlee {
     color: white;
-    font-size: 16px;
-    transform: .3s ease;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-top: 20px;
 }
 
-    .submit2:hover {
-        background-color: steelblue;
-    }
-
-@keyframes pulse {
-    from {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-
-    to {
-        transform: scale(1.8);
-        opacity: 0;
-    }
+.subb_title {
+    font-weight: 600;
+    margin: 5px 0;
+    color:white;
 }
+
+.formm_group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px;
+}
+
+.form_stylee {
+    outline: none;
+    border: 2px solid lightgray;
+    box-shadow: 3px 4px 0px 1px lightgray;
+    width: 360px;
+    padding: 12px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+    .form_stylee:focus, .btn:focus {
+        transform: translateY(4px);
+        box-shadow: 1px 2px 0px 0px lightgray;
+    }
+
+.btnn {
+    padding: 15px;
+    margin: 25px auto;
+    width: 290px;
+    font-size: 15px;
+    color: #0077b6;
+    background: white;
+    border-radius: 10px;
+    font-weight: 800;
+    box-shadow: 3px 3px 0px 0px lightgray;
+    display: block;
+    text-align: center;
+}
+
+    .btnn:hover {
+        opacity: .9;
+    }
 
 .left-header2 {
     position: absolute;
-    top: 800px;
+    top: 900px;
     left: 50px;
     color: #333;
 }
@@ -667,11 +613,139 @@ html {
     }
 
 .form-container3 {
+    margin-top: 100px;
     display: flex;
     align-items: flex-start;
 }
 
-.sucessMsg {
-    color:green;
-    font-size:15px;
+.party-list-container {
+    margin-top: 30px;
+    margin-left:40px;
+}
+
+#partyList li {
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    color: #0077b6;
+    border-radius: 25px;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom:20px;
+}
+
+.party-name {
+    font-weight: bold;
+}
+
+.delete-icon {
+    cursor: pointer;
+    width: 25px; 
+    height: 25px; 
+    margin-left: 10px;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+/* Add Election Page */
+.checklist-container {
+    max-width: 500px; 
+    padding: 10px;
+    margin-right: 100px; 
+    font-size:20px;
+}
+
+    .checklist-container ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        font-size: 20px;
+    }
+
+    .checklist-container li {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+.party-image {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+/* Slideshow container - Code adapted from (W3Schools) www.w3schools.com */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+}
+
+.mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+    }
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+q {
+    font-style: italic;
+}
+
+.author {
+    color: cornflowerblue;
 }

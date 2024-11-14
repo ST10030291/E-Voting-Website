@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Images\\IEC_logo.png"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\delete_icon.png",
+      "PackagePath": "staticwebassets\\Images\\delete_icon.png"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\hand_vote_box.png",
       "PackagePath": "staticwebassets\\Images\\hand_vote_box.png"
     },

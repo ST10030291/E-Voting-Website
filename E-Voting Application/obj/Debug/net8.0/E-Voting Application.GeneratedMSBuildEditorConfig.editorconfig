@@ -18,20 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/ElectionManagement/AddElection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlY3Rpb25NYW5hZ2VtZW50XEFkZEVsZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/ElectionManagement/AddParty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlY3Rpb25NYW5hZ2VtZW50XEFkZFBhcnR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/ElectionManagement/CastVote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlY3Rpb25NYW5hZ2VtZW50XENhc3RWb3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/Home/AddElection.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRFbGVjdGlvbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/Home/AddParty.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRQYXJ0eS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/Home/CastVote.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXN0Vm90ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Avish/OneDrive/Desktop/INF4001N_JDNAVI001_ElectCode_2024/E-Voting Application/Views/Home/Index.cshtml]
