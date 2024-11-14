@@ -24,6 +24,11 @@ namespace E_Voting_Application.Controllers
             return View();
         }
 
+        public IActionResult VotingRules()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult RegisterPartyForm(Models.Party party)
         {

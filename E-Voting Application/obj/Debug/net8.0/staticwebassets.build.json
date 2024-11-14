@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YaFi8QXuY7lKEKq5qmUGsruNVbkARNZpcbwQ7HghO3A=",
+  "Hash": "wUq03R1/zJic9jxhSnI5CkxCDFWwjN/RuDwhASAw7yE=",
   "Source": "E-Voting Application",
   "BasePath": "_content/E-Voting Application",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\political_parties.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\rules_icon.jpg",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/rules_icon.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\rules_icon.jpg"
     },
     {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\sa_flag_vote.jpg",

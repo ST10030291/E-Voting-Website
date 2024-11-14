@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\political_parties.jpg"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\rules_icon.jpg",
+      "PackagePath": "staticwebassets\\Images\\rules_icon.jpg"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\sa_flag_vote.jpg",
       "PackagePath": "staticwebassets\\Images\\sa_flag_vote.jpg"
     },

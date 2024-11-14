@@ -61,6 +61,17 @@
         </div>
     </a>
 
+    <!-- Voter-only card -->
+    <a asp-controller="ElectionManagement" asp-action="VotingRules" class="card-link" id="voterCard2">
+        <div class="card1">
+            <img src="~/Images/rules_icon.jpg" alt="Avatar" style="width:100%">
+            <div class="container1">
+                <h4><b>Voting Rules</b></h4>
+                <p>Make sure you understand online voting rules before voting..</p>
+            </div>
+        </div>
+    </a>
+
     <!-- Admin-only card -->
     <a asp-controller="ElectionManagement" asp-action="AddParty" class="card-link" id="adminCard2">
         <div class="card1">
@@ -99,6 +110,7 @@
     document.getElementById("adminCard1").style.display = "none";
     document.getElementById("adminCard2").style.display = "none";
     document.getElementById("voterCard1").style.display = "none";
+    document.getElementById("voterCard2").style.display = "none";
 
     // Auth Check
     onAuthStateChanged(auth, (user) => {
@@ -123,6 +135,7 @@
                         document.getElementById("adminCard2").style.display = "block";
                     } else if (userData.role === "Voter") {
                         document.getElementById("voterCard1").style.display = "block";
+                        document.getElementById("voterCard2").style.display = "block";
                     }
 
                     if (userData.role === "Voter") {

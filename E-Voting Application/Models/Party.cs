@@ -12,7 +12,9 @@ namespace E_Voting_Application.Models
         [Required]
         public string JurisdictionLevel { get; set;} // Either national, provincial or both. 
         [Required]
-        public int VoteCount { get; set; }
+        public int NationalVoteCount { get; set; }
+        [Required]
+        public int ProvincialVoteCount { get; set; }
         [Required]
         public string PartyImageUrl { get; set; }
         [Required]
