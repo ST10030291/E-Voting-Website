@@ -87,6 +87,7 @@
 
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, doc, getDoc, setDoc, addDoc, updateDoc, increment, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
     import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
@@ -106,6 +107,7 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const database = getDatabase(app);
+    const db = getFirestore(app);
 
     document.getElementById("adminCard1").style.display = "none";
     document.getElementById("adminCard2").style.display = "none";
@@ -115,21 +117,20 @@
     // Auth Check
     onAuthStateChanged(auth, (user) => {
         if (user) {
+            // User is logged in
             const userRef = ref(database, 'users/' + user.uid);
 
             get(userRef).then((snapshot) => {
                 if (snapshot.exists()) {
                     const userData = snapshot.val();
 
-                    // Display 
                     document.getElementById("profileName").textContent = userData.name + " " + userData.surname || "Unknown User";
                     document.getElementById("profileRole").textContent = userData.role || "Unknown User";
                     document.getElementById("profileIdNumber").textContent = userData.idNumber || "Unknown User";
                     document.getElementById("profileEmail").textContent = user.email || "Unknown User";
                     document.getElementById("profileProvince").textContent = userData.province || "Unknown User";
 
-                    // Show cards based on role so if a user is not logged,
-                    // no cards will be shown hence stopping these users from accessing these features
+                    // Show cards based on role
                     if (userData.role === "Admin") {
                         document.getElementById("adminCard1").style.display = "block";
                         document.getElementById("adminCard2").style.display = "block";
@@ -146,7 +147,7 @@
                         document.getElementById("registrationStatus").textContent = "Not Registered";
                     }
                 } else {
-
+                    // No user data found in database
                     document.getElementById("profileName").textContent = "Unknown User";
                     document.getElementById("profileRole").textContent = "Unknown User";
                     document.getElementById("profileIdNumber").textContent = "Unknown User";
@@ -158,13 +159,62 @@
                 console.error("Error fetching user data:", error);
             });
         } else {
+  
+            setTimeout(() => {
+                if (!auth.currentUser) { // Check again if the user is still not logged in
+                    alert("Please log in to gain access to your profile.");
+                }
+            }, 2000);
 
+            // default 
             document.getElementById("profileName").textContent = "Unknown User";
             document.getElementById("profileRole").textContent = "Unknown User";
             document.getElementById("profileIdNumber").textContent = "Unknown User";
             document.getElementById("profileEmail").textContent = "Unknown User";
             document.getElementById("profileProvince").textContent = "Unknown User";
             document.getElementById("registrationStatus").textContent = "Not Registered";
+        }
+    });
+
+    // Verify if user didnt vote already and if there is an ongoing election first
+    document.getElementById("voterCard1").addEventListener("click", async (event) => {
+        event.preventDefault(); // Prevent immediate navigation
+
+        try {
+            // Step 1: Check for ongoing election
+            const electionSnapshot = await getDocs(collection(db, "elections"));
+            let ongoingElection = false;
+
+            const currentTime = new Date();
+
+            electionSnapshot.forEach(doc => {
+                const electionData = doc.data();
+
+                // Convert Firestore timestamp to JavaScript Date
+                const startTime = electionData.StartDate.toDate();
+                const endTime = electionData.EndDate.toDate();
+
+                if (currentTime >= startTime && currentTime <= endTime) {
+                    ongoingElection = true;
+                }
+            });
+
+            if (ongoingElection) {
+                // Step 2: Check if user has already voted
+                const user = auth.currentUser;
+                const voteSnapshot = await getDocs(query(collection(db, "votes"), where("VoterId", "==", user.uid)));
+
+                if (voteSnapshot.empty) {
+                    // Both conditions met, proceed to cast vote page
+                    window.location.href = '/ElectionManagement/CastVote';
+                } else {
+                    alert("You have already cast your vote.");
+                }
+            } else {
+                alert("No ongoing election at this time.");
+            }
+        } catch (error) {
+            console.error("Error checking election or vote status:", error);
         }
     });
 </script>

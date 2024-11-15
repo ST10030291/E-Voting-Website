@@ -5,32 +5,267 @@
     ViewData["Title"] = "Cast Vote";
 }
 
-<div class="left-header1">
-    <h1></h1> <!-- Here display the name of the current election-->
+<div class="left-header3">
+    <h1> Ballot Paper</h1>
 </div>
-<br/>
-<br/>
-<div class="left-header1">
-    <h1>National Election Candidates</h1>
+<br />
+<br />
+
+<div class="party-list-container">
+    <p><h1 class="b1">National Election Candidates</h1></p>
+    <ul id="nationalPartyList">
+        <!-- National Parties -->
+    </ul>
+
+    <p><h1 class="b1">Provincial Election Candidates</h1></p>
+    <ul id="provincialPartyList">
+        <!-- Provincial Parties -->
+    </ul>
+
+    <button id="submitVoteButton" class="vote-button">Submit Vote</button>
+    <button id="homeButton" class="vote-button">Go to Home Page</button>
 </div>
 
-<!-- Display all partys if their jurisdiction level is national or both -->
-<!-- have a checkbox designed well that inputs a cross animation if possible only -->
-<!-- make sure you can only choose one national candidate --> -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, doc, getDoc, setDoc, addDoc, updateDoc, increment, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { getDatabase, ref as dbRef, get, set } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
 
-<br/>
-<br/>
-<div class="left-header1">
-    <h1>Provincial Election Candidates</h1>
-</div>
+    const firebaseConfig = {
+        apiKey: "AIzaSyC01tpLg7LvB7yfTHtkB2-jfb9z-_2dA20",
+        authDomain: "e-voting-application-b782e.firebaseapp.com",
+        databaseURL: "https://e-voting-application-b782e-default-rtdb.firebaseio.com",
+        projectId: "e-voting-application-b782e",
+        storageBucket: "e-voting-application-b782e.firebasestorage.app",
+        messagingSenderId: "942000114372",
+        appId: "1:942000114372:web:0c5ab2571efada94515791",
+        measurementId: "G-YHRLF496SD"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
 
-<!-- Display all partys if their jurisdiction level is provincial or both -->
-<!-- have a checkbox designed well that inputs a cross animation if possible only -->
-<!-- make sure you can only choose one provincial candidate -->
+    let selectedNationalParty = null;
+    let selectedProvincialParty = null;
 
+    document.getElementById('homeButton').style.display = 'none';
 
-<!-- Vote button bottom right -->
+    // Fetch parties and add to lists
+    async function fetchParties() {
+        const nationalPartyList = document.getElementById('nationalPartyList');
+        const provincialPartyList = document.getElementById('provincialPartyList');
+        nationalPartyList.innerHTML = '';
+        provincialPartyList.innerHTML = '';
 
-<!-- add error handling to make sure the user chooses one of both provincial and national -->
-<!-- ONE BIG THING, IF A USER HAS ALREADY VOTED DISPLAY THIS PAGE WITH THE HEADING ONLY AND SAY YOU HAVE ALREADY CAST A VOTE FOR THIS ELECTION -->
-<!-- OR IF THERE IS NO CURRENT ELECTION DISPLAY SO, CHECK IF THEIR IS ONE THEN PPL CAN VOTE-->
+        const partiesSnapshot = await getDocs(collection(db, 'parties'));
+
+        partiesSnapshot.forEach(async (doc) => {
+            const partyData = doc.data();
+
+            const createPartyItem = async (jurisdiction) => {
+                const partyItem = document.createElement('li');
+                partyItem.classList.add('party-item');
+
+                const partyLogo = document.createElement('img');
+                partyLogo.alt = `${partyData.PartyName} logo`;
+                partyLogo.classList.add('party-logo');
+                try {
+                    const partyLogoUrl = await getDownloadURL(ref(storage, partyData.PartyImageUrl));
+                    partyLogo.src = partyLogoUrl;
+                } catch (error) {
+                    console.error("Error fetching party logo URL:", error);
+                    partyLogo.src = '/Images/user_icon.png';
+                }
+
+                const leaderLogo = document.createElement('img');
+                leaderLogo.alt = `${partyData.PartyLeader} logo`;
+                leaderLogo.classList.add('leader-logo');
+                try {
+                    const leaderLogoUrl = await getDownloadURL(ref(storage, partyData.LeaderImageUrl));
+                    leaderLogo.src = leaderLogoUrl;
+                } catch (error) {
+                    console.error("Error fetching leader logo URL:", error);
+                    leaderLogo.src = '/Images/user_icon.png';
+                }
+
+                const partyName = document.createElement('span');
+                partyName.classList.add('party-name');
+                partyName.textContent = partyData.PartyName;
+
+                const leaderName = document.createElement('span');
+                leaderName.classList.add('leader-name');
+                leaderName.textContent = `Leader: ${partyData.PartyLeader}`;
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add('party-checkbox');
+                checkbox.name = `${partyData.PartyName}-${jurisdiction}`;
+
+                // Event listener for each checkbox
+                checkbox.addEventListener('change', function () {
+                    if (jurisdiction === "National") {
+                        if (checkbox.checked) {
+                            selectedNationalParty = partyData.PartyName;
+                            clearCheckboxes('nationalPartyList', checkbox);
+                        } else {
+                            selectedNationalParty = null;
+                        }
+                    } else if (jurisdiction === "Provincial") {
+                        if (checkbox.checked) {
+                            selectedProvincialParty = partyData.PartyName;
+                            clearCheckboxes('provincialPartyList', checkbox);
+                        } else {
+                            selectedProvincialParty = null;
+                        }
+                    }
+                });
+
+                partyItem.appendChild(partyLogo);
+                partyItem.appendChild(partyName);
+                partyItem.appendChild(leaderLogo);
+                partyItem.appendChild(leaderName);
+                partyItem.appendChild(checkbox);
+
+                partyItem.style.display = "flex";
+                partyItem.style.alignItems = "center";
+                partyItem.style.marginBottom = "10px";
+                partyLogo.style.marginRight = "10px";
+                partyName.style.marginRight = "10px";
+                leaderLogo.style.marginRight = "10px";
+                leaderName.style.marginRight = "10px";
+                checkbox.style.marginLeft = "10px";
+
+                return partyItem;
+            };
+
+            // Add to national list if jurisdiction is national or both
+            if (partyData.JurisdictionLevel === "National" || partyData.JurisdictionLevel === "Both") {
+                const nationalPartyItem = await createPartyItem("National");
+                nationalPartyList.appendChild(nationalPartyItem);
+            }
+
+            // Add to provincial list if jurisdiction is provincial or both
+            if (partyData.JurisdictionLevel === "Provincial" || partyData.JurisdictionLevel === "Both") {
+                const provincialPartyItem = await createPartyItem("Provincial");
+                provincialPartyList.appendChild(provincialPartyItem);
+            }
+        });
+    }
+
+    function clearCheckboxes(listId, currentCheckbox) {
+        const checkboxes = document.querySelectorAll(`#${listId} .party-checkbox`);
+        checkboxes.forEach(cb => {
+            if (cb !== currentCheckbox) {
+                cb.checked = false;
+            }
+        });
+    }
+
+    document.getElementById('submitVoteButton').addEventListener('click', async () => {
+        if (!selectedNationalParty || !selectedProvincialParty) {
+            alert("You must select one party from each list to vote.");
+            return;
+        }
+
+        // Get the current user ID
+        const user = auth.currentUser;
+        if (!user) {
+            alert("You must be logged in to vote.");
+            return;
+        }
+        const userId = user.uid;
+
+        // Fetch user's idNumber and province 
+        const userRef = dbRef(database, `users/${userId}`);
+        const userSnapshot = await get(userRef);
+
+        if (!userSnapshot.exists()) {
+            alert("User data not found in Realtime Database.");
+            return;
+        }
+
+        const userData = userSnapshot.val();
+        const idNumber = userData.idNumber;  
+        const province = userData.province; 
+
+        if (!province) {
+            alert("Province information is missing.");
+            return;
+        }
+
+        const voteData = {
+            VoterId: userId,
+            NationalPartyId: selectedNationalParty,
+            ProvincialPartyId: selectedProvincialParty,
+            Province: province,
+            DateCast: new Date()
+        };
+
+        try {
+            // Vote > Firestore
+            await addDoc(collection(db, "votes"), voteData);
+
+            const partiesSnapshot = await getDocs(collection(db, "parties"));
+
+            let partyFoundNational = false;
+            let partyFoundProvincial = false;
+
+            // Increment vote count for National Party
+            partiesSnapshot.forEach(async (partyDoc) => {
+                const partyData = partyDoc.data();
+
+                if (partyData.PartyName === selectedNationalParty) {
+                    partyFoundNational = true;
+                    console.log(`Updating National vote for: ${partyData.PartyName}`);
+                    const nationalPartyDocRef = doc(db, "parties", partyDoc.id);
+                    await incrementVoteCount(nationalPartyDocRef, "NationalVoteCount");
+                }
+
+                if (partyData.PartyName === selectedProvincialParty) {
+                    partyFoundProvincial = true;
+                    console.log(`Updating Provincial vote for: ${partyData.PartyName}`);
+                    const provincialPartyDocRef = doc(db, "parties", partyDoc.id);
+                    await incrementVoteCount(provincialPartyDocRef, "ProvincialVoteCount");
+                }
+            });
+
+            if (!partyFoundNational) {
+                console.error(`National party ${selectedNationalParty} not found.`);
+            }
+            if (!partyFoundProvincial) {
+                console.error(`Provincial party ${selectedProvincialParty} not found.`);
+            }
+
+            const submitButton = document.getElementById('submitVoteButton');
+            submitButton.style.display = 'none';
+
+            document.getElementById('homeButton').style.display = 'block';
+            homeButton.addEventListener('click', () => {
+                window.location.href = '/'; 
+            });
+
+            alert("Your vote has been successfully cast!");
+
+        } catch (error) {
+            console.error("Error submitting vote:", error);
+            alert("An error occurred while submitting your vote. Please try again.");
+        }
+    });
+
+    // increment the vote count
+    async function incrementVoteCount(partyDocRef, voteCountField) {
+        const partyDoc = await getDoc(partyDocRef);
+        if (partyDoc.exists()) {
+            const currentCount = partyDoc.data()[voteCountField] || 0;
+            await updateDoc(partyDocRef, { [voteCountField]: currentCount + 1 });
+        } else {
+            console.error("Party document does not exist:", partyDocRef.id);
+        }
+    }
+
+    fetchParties();
+</script>
