@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Images\\delete_icon.png"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\election_results.jpg",
+      "PackagePath": "staticwebassets\\Images\\election_results.jpg"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\facebook_logo.jpg",
       "PackagePath": "staticwebassets\\Images\\facebook_logo.jpg"
     },
@@ -29,12 +33,24 @@
       "PackagePath": "staticwebassets\\Images\\nelson_mandela_voting.jpg"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\news_slide1.png",
+      "PackagePath": "staticwebassets\\Images\\news_slide1.png"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\news_slide2.jpg",
+      "PackagePath": "staticwebassets\\Images\\news_slide2.jpg"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\political_parties.jpg",
       "PackagePath": "staticwebassets\\Images\\political_parties.jpg"
     },
     {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\rules_icon.jpg",
       "PackagePath": "staticwebassets\\Images\\rules_icon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\sa_flag_fist.jpg",
+      "PackagePath": "staticwebassets\\Images\\sa_flag_fist.jpg"
     },
     {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\sa_flag_vote.jpg",

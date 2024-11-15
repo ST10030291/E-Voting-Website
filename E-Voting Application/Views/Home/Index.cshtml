@@ -4,8 +4,193 @@
 
 <head>
 	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<!-- Countdown -->
+<h2 id="wlcMsg">General Elections 2024</h2>
+<p id="demo"></p>
 
+<!-- Banner -->
+<div class="image-placeholder">
+	<img src="~/Images/sa_flag_fist.jpg" alt="Election Banner" class="full-width-image">
+</div>
+
+<!-- Home Page card -->
+<div class="header-container">
+	<div class="card-title">
+		<h2 id="nationalHeader">Top 3 parties nationally</h2>
+	</div>
+
+	<div class="card-title">
+		<h2 id="provincialHeader">Top 3 parties provincially</h2>
+	</div>
+</div>
+
+<!-- National Parties Section -->
+<div class="card-container">
+	<div class="floating-card">
+		<div class="card-content">
+			<div class="party-ranking">
+				<!-- Top Party 1 -->
+				<div class="party">
+					<img src="~/Images/user_icon.png" alt="Party 1 Logo" class="party-logo">
+					<div class="party-info">
+						<div class="party-name">Party 1</div>
+						<div class="party-leader">Leader: John Doe</div>
+					</div>
+					<img src="~/Images/user_icon.png" alt="Leader 1" class="leader-image">
+					<div class="vote-count">Votes: 1,500,000</div>
+				</div>
+
+				<!-- Top Party 2 -->
+				<div class="party">
+					<img src="~/Images/user_icon.png" alt="Party 2 Logo" class="party-logo">
+					<div class="party-info">
+						<div class="party-name">Party 2</div>
+						<div class="party-leader">Leader: Jane Smith</div>
+					</div>
+					<img src="~/Images/user_icon.png" alt="Leader 2" class="leader-image">
+					<div class="vote-count">Votes: 1,200,000</div>
+				</div>
+
+				<!-- Top Party 3 -->
+				<div class="party">
+					<img src="~/Images/user_icon.png" alt="Party 3 Logo" class="party-logo">
+					<div class="party-info">
+						<div class="party-name">Party 3</div>
+						<div class="party-leader">Leader: Alan Brown</div>
+					</div>
+					<img src="~/Images/user_icon.png" alt="Leader 3" class="leader-image">
+					<div class="vote-count">Votes: 900,000</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Provincial Parties Section -->
+	<div class="floating-card">
+		<div class="card-content">
+			<div class="party-ranking">
+				<!-- Top Party 1 -->
+				<div class="party">
+					<img src="~/Images/user_icon.png" alt="Party 1 Logo" class="party-logo">
+					<div class="party-info">
+						<div class="party-name">Party 1</div>
+						<div class="party-leader">Leader: John Doe</div>
+					</div>
+					<img src="~/Images/user_icon.png" alt="Leader 1" class="leader-image">
+					<div class="vote-count">Votes: 1,500,000</div>
+				</div>
+
+				<!-- Top Party 2 -->
+				<div class="party">
+					<img src="~/Images/user_icon.png" alt="Party 2 Logo" class="party-logo">
+					<div class="party-info">
+						<div class="party-name">Party 2</div>
+						<div class="party-leader">Leader: Jane Smith</div>
+					</div>
+					<img src="~/Images/user_icon.png" alt="Leader 2" class="leader-image">
+					<div class="vote-count">Votes: 1,200,000</div>
+				</div>
+
+				<!-- Top Party 3 -->
+				<div class="party">
+					<img src="~/Images/user_icon.png" alt="Party 3 Logo" class="party-logo">
+					<div class="party-info">
+						<div class="party-name">Party 3</div>
+						<div class="party-leader">Leader: Alan Brown</div>
+					</div>
+					<img src="~/Images/user_icon.png" alt="Leader 3" class="leader-image">
+					<div class="vote-count">Votes: 900,000</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="card-title">
+	<h2 id="nationalHeader2">National Party Rankings</h2>
+</div>
+<!-- Ranking partys nationally -->
+<table id="partyTable1" class="party-table">
+	<thead>
+		<tr>
+			<th>Party Name</th>
+			<th>Party Logo</th>
+			<th>Leader Name</th>
+			<th>Leader Image</th>
+			<th>Votes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- Rows  -->
+	</tbody>
+</table>
+
+<div class="card-title">
+	<h2 id="provincialHeader2">Provincial Party Rankings</h2>
+</div>
+
+<!-- Province Filter -->
+<div class="province-filter">
+	<label for="provinceSelect">Filter by Province:</label>
+	<select id="provinceSelect">
+		<option value="Eastern Cape">Eastern Cape</option>
+		<option value="Free State">Free State</option>
+		<option value="Gauteng">Gauteng</option>
+		<option value="KwaZulu-Natal">KwaZulu-Natal</option>
+		<option value="Limpopo">Limpopo</option>
+		<option value="Mpumalanga">Mpumalanga</option>
+		<option value="North West">North West</option>
+		<option value="Northern Cape">Northern Cape</option>
+		<option value="Western Cape" selected>Western Cape</option>
+	</select>
+</div>
+
+<!-- Provincial Table -->
+<table id="partyTable2" class="party-table">
+	<thead>
+		<tr>
+			<th>Party Name</th>
+			<th>Party Logo</th>
+			<th>Leader Name</th>
+			<th>Leader Image</th>
+			<th>Votes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- Rows -->
+	</tbody>
+</table>
+
+<!-- Stats section -->
+
+<!-- Slideshow latest news-->
+<div class="slideshow-container2">
+
+	<div class="mySlides2 fade2">
+		<img src="~/Images/news_slide1.png" alt="Slide 1" style="width:100%">
+	</div>
+
+	<div class="mySlides2 fade2">
+		<img src="~/Images/news_slide2.jpg" alt="Slide 2" style="width:100%">
+	</div>
+
+	<div class="mySlides2 fade2">
+		<img src="~/Images/election_results.jpg" alt="Slide 3" style="width:100%">
+	</div>
+
+	<a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+	<a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+	<span class="dot2" onclick="currentSlide2(1)"></span>
+	<span class="dot2" onclick="currentSlide2(2)"></span>
+	<span class="dot2" onclick="currentSlide2(3)"></span>
+</div>
+
+<!-- Social Media Section-->
 <section class="testimonials section">
 	<div class="testimonials-shape testimonials-shape-1">
 		<svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +225,10 @@
 	</div>
 	<div class="container">
 		<div class="testimonials-inner section-inner">
-			<h2 class="section-title mt-0 text-center">What is social media saying ?</h2>
+			<div class="typing-loader">
+				<h1 id="typing-text" class="typing-text"></h1>
+			</div>
+			<h2 class="section-title mt-0 text-center"></h2>
 			<div class="testimonials-wrap">
 				<div class="testimonial text-xs is-revealing">
 					<div class="testimonial-inner">
@@ -97,3 +285,109 @@
 		</div>
 	</div>
 </section>
+
+<div class="social-media-container">
+	<h3 class="section-title mt-0 text-center">IEC Social Media Links</h3>
+	<div class="social-media-tray">
+		<a href="https://www.facebook.com/IECSouthAfrica" target="_blank" class="fa fa-facebook"></a>
+		<a href="https://twitter.com/IECSouthAfrica" target="_blank" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/iecsouthafrica/" target="_blank" class="fa fa-instagram"></a>
+		<a href="https://www.youtube.com/user/IECSouthAfrica" target="_blank" class="fa fa-youtube"></a>
+	</div>
+</div>
+
+<script>
+	// Code for countdown 
+	// Set the date we're counting down to
+	var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function () {
+
+		// Get today's date and time
+		var now = new Date().getTime();
+
+		// Find the distance between now and the count down date
+		var distance = countDownDate - now;
+
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// Display the result in the element with id="demo"
+		document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+			+ minutes + "m " + seconds + "s ";
+
+		// If the count down is finished, write some text
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "EXPIRED";
+		}
+	}, 1000);
+	// Code for countdown END 
+
+	// Code for social media message message
+	const textElement = document.getElementById("typing-text");
+	const texts = ["What is social media saying ?", "#GeneralElections2024", "#YourVoteYourPower"];
+	let index = 0;
+	let charIndex = 0;
+	let isDeleting = false;
+
+	function typeEffect() {
+		const currentText = texts[index];
+
+		if (isDeleting) {
+			charIndex--;
+		} else {
+			charIndex++; 
+		}
+
+		textElement.textContent = currentText.slice(0, charIndex);
+
+		if (!isDeleting && charIndex === currentText.length) {
+			isDeleting = true;
+			setTimeout(typeEffect, 1000); 
+		} else if (isDeleting && charIndex === 0) {
+			isDeleting = false; 
+			index = (index + 1) % texts.length; 
+			setTimeout(typeEffect, 500); 
+		} else {
+			setTimeout(typeEffect, isDeleting ? 100 : 150); 
+		}
+	}
+	typeEffect();
+
+	// End of code for message
+
+	// Code for Slides
+	let slideIndex2 = 1;
+	showSlides2(slideIndex2);
+
+	function plusSlides2(n) {
+		showSlides2(slideIndex2 += n);
+	}
+
+	function currentSlide2(n) {
+		showSlides2(slideIndex2 = n);
+	}
+
+	function showSlides2(n) {
+		let slides = document.getElementsByClassName("mySlides2");
+		let dots = document.getElementsByClassName("dot2");
+		if (n > slides.length) { slideIndex2 = 1 }
+		if (n < 1) { slideIndex2 = slides.length }
+		for (let i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (let i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active2", "");
+		}
+		slides[slideIndex2 - 1].style.display = "block";
+		dots[slideIndex2 - 1].className += " active2";
+	}
+
+	setInterval(() => plusSlides2(1), 5000);
+	// End of SLides code
+</script>
