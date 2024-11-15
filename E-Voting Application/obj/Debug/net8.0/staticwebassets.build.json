@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wUq03R1/zJic9jxhSnI5CkxCDFWwjN/RuDwhASAw7yE=",
+  "Hash": "afA4tF1SzMNnBWTXlgxeVrsEOx1f2E2pR4ZAIJ6BVlE=",
   "Source": "E-Voting Application",
   "BasePath": "_content/E-Voting Application",
   "Mode": "Default",
@@ -131,6 +131,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\delete_icon.png"
     },
     {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\facebook_logo.jpg",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/facebook_logo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\facebook_logo.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\hand_vote_box.png",
       "SourceId": "E-Voting Application",
       "SourceType": "Discovered",
@@ -167,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\IEC_logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\instagram_logo.png",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/instagram_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\instagram_logo.png"
     },
     {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\nelson_mandela_voting.jpg",
@@ -245,6 +283,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\sa_flag_vote.jpg"
     },
     {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\twitter_logo.png",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/twitter_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\twitter_logo.png"
+    },
+    {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\user_icon.png",
       "SourceId": "E-Voting Application",
       "SourceType": "Discovered",
@@ -262,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\user_icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\voting_gif.gif",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Images/voting_gif.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\voting_gif.gif"
     },
     {
       "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\js\\site.js",
@@ -1364,6 +1440,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Videos\\elections_vid.mp4",
+      "SourceId": "E-Voting Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\",
+      "BasePath": "_content/E-Voting Application",
+      "RelativePath": "Videos/elections_vid.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Videos\\elections_vid.mp4"
     }
   ]
 }

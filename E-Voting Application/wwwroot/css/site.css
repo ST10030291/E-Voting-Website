@@ -620,7 +620,8 @@ html {
 
 .party-list-container {
     margin-top: 30px;
-    margin-left:40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
 }
 
 #partyList li {
@@ -866,17 +867,17 @@ q {
 /* Video - about page*/
 #myVideo {
     position: relative;
-    width: 100%;
-    height: 200px;
+    width: 700px;
+    height: 700px;
     z-index: -1;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .vidcontent {
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     position: relative;
 }
 
