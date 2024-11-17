@@ -1399,43 +1399,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-container {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px 0;
+    justify-content: center;
 }
 
 .floating-card {
-    width: 48%;
-    background-color: #fff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    width: 100%;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    background-color: lightgray;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.party .position {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    text-align: center;
+}
+
 
 .party-ranking {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%;
 }
 
 .party {
     display: flex;
     align-items: center;
-    gap: 15px;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.party-logo, .leader-image {
-    width: 50px;
-    height: 50px;
+.party-logo {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 50%;
+}
+
+.leader-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .party-info {
@@ -1443,18 +1460,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .party-name {
-    font-size: 16px;
+    font-size: 25px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .party-leader {
-    font-size: 14px;
+    font-size: 21px;
     color: #555;
 }
 
 .vote-count {
-    font-size: 14px;
-    color: #FF6347;
+    font-size: 21px;
+    color: #333;
     font-weight: bold;
 }
 
@@ -1540,3 +1558,11 @@ h1, h2, h3, h4, h5, h6 {
         padding: 5px;
         font-size: 14px;
     }
+
+#con1 {
+    width: 100%; 
+    padding: 20px; 
+    margin-top: 20px; 
+    background-color: #f9f9f9; 
+    box-sizing: border-box; 
+}
