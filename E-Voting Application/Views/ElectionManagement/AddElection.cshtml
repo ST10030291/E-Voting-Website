@@ -93,38 +93,33 @@
 
         const partiesSnapshot = await getDocs(collection(db, 'parties'));
         partiesSnapshot.forEach(async (doc) => {
-            // Debugging: log the whole party data
             console.log("Party data:", doc.data());
 
             const partyData = doc.data();
 
-            // Use the correct field name (PartyImageUrl, not PartyImageURL)
             const imageUrl = partyData.PartyImageUrl;
-            console.log("Image URL from Firestore:", imageUrl); // Debugging line
+            console.log("Image URL from Firestore:", imageUrl); 
 
-            // Create a new list item for the party
             const partyItem = document.createElement('li');
-
-            // Create the party image element
             const partyImage = document.createElement('img');
 
             if (imageUrl) {
-                const storageRef = ref(storage, imageUrl); // Use image URL directly from Firestore
+                const storageRef = ref(storage, imageUrl); /
                 try {
                     const downloadUrl = await getDownloadURL(storageRef);
-                    console.log("Download URL:", downloadUrl); // Debugging line
-                    partyImage.src = downloadUrl; // Set the image src to the download URL
+                    console.log("Download URL:", downloadUrl); 
+                    partyImage.src = downloadUrl; 
                 } catch (error) {
                     console.error("Error fetching image URL:", error);
-                    partyImage.src = '/Images/user_icon.png'; // Default image if fetching fails
+                    partyImage.src = '/Images/user_icon.png';
                 }
             } else {
                 // Default image if no image URL exists
                 partyImage.src = '/Images/user_icon.png';
             }
 
-            partyImage.alt = `${partyData.PartyName} logo`; // Alt text for the image
-            partyImage.classList.add('party-image'); // Optional: add a class for styling
+            partyImage.alt = `${partyData.PartyName} logo`; 
+            partyImage.classList.add('party-image'); 
 
             // Create party name and leader
             const partyName = document.createElement('span');
