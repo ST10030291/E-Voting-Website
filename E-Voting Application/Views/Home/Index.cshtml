@@ -5,6 +5,7 @@
 <head>
 	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <!-- Countdown -->
 <h2 id="wlcMsg"></h2>
@@ -18,7 +19,7 @@
 <!-- Home Page card -->
 <div class="header-container">
 	<div class="card-title">
-		<h2 id="nationalHeader">Top 3 current parties nationally</h2>
+		<h2 id="nationalHeader">Current top 3 parties nationally</h2>
 	</div>
 </div>
 
@@ -67,12 +68,19 @@
 	</div>
 </div>
 
-<!-- separate stuff --> 
+<!-- Statistics --> 
+
+<div id="chartsContainer" style="display: flex; justify-content: space-around; gap: 20px;">
+	<div id="piechart"></div>
+	<div id="linechart" style="width: 550px; height: 400px; margin-top: 20px;"></div>
+</div>
+
+<div id="barchart" style="width: 550px; height: 400px;"></div>
 
 <div class="container" id="con1">
 	<!-- National Party Rankings -->
 	<div class="card-title">
-		<h2 id="nationalHeader2">National Party Rankings - All</h2>
+		<h2 id="nationalHeader">National Party Rankings - All</h2>
 	</div>
 	<!-- Ranking parties nationally -->
 	<table id="partyTable1" class="party-table">
@@ -87,13 +95,13 @@
 			</tr>
 		</thead>
 		<tbody>
-			<!-- Rows will be populated dynamically -->
+			<!-- Rows will be populated dynamicaly -->
 		</tbody>
 	</table>
 
 	<!-- Provincial Party Rankings -->
 	<div class="card-title">
-		<h2 id="provincialHeader2">Provincial Party Rankings - All</h2>
+		<h2 id="provincialHeader">Provincial Party Rankings</h2>
 	</div>
 
 	<!-- Province Filter -->
@@ -130,7 +138,7 @@
 	</table>
 </div>
 
-<!-- Stats section -->
+<h2 id="nationalHeader">Latest News - IEC Elections</h2>
 
 <!-- Slideshow latest news-->
 <div class="slideshow-container2">
@@ -448,16 +456,149 @@
 			});
 	};
 
-	//province filter change
+	//province filter 
 	provinceSelect.addEventListener("change", (event) => {
 		const selectedProvince = event.target.value;
 		fetchProvincialRankings(selectedProvince);
 	});
 
 	// default 
-	fetchProvincialRankings("Kwa-zulu Natal");
-
+	fetchProvincialRankings("Western Cape");
 	// Code for national ranking All - End 
+
+	// Pie Chart 
+	async function displayPieChart() {
+		const partyQuery = query(
+			collection(db, 'parties'),
+			where('JurisdictionLevel', 'in', ['National', 'Both'])
+		);
+
+		const querySnapshot = await getDocs(partyQuery);
+		let parties = [];
+		let totalVotes = 0;
+
+		querySnapshot.forEach(doc => {
+			const partyData = doc.data();
+			parties.push({
+				name: partyData.PartyName,
+				votes: partyData.NationalVoteCount
+			});
+			totalVotes += partyData.NationalVoteCount;
+		});
+
+		const chartData = [['Party', 'Percentage']];
+		parties.forEach(party => {
+			const percentage = (party.votes / totalVotes) * 100;
+			chartData.push([party.name, percentage]);
+		});
+
+		// Load and draw the pie chart
+		google.charts.load('current', { packages: ['corechart'] });
+		google.charts.setOnLoadCallback(() => {
+			const data = google.visualization.arrayToDataTable(chartData);
+			const options = {
+				title: 'National Party Voting Percentages',
+				width: 550,
+				height: 400,
+				is3D: true,
+				pieSliceText: 'percentage',
+				fontSize: 20,
+				legend: { position: 'bottom' },
+			};
+
+			const chart = new google.visualization.PieChart(document.getElementById('piechart'));
+			chart.draw(data, options);
+		});
+	}
+
+	displayPieChart();
+
+	// Graphs
+	async function displayCharts() {
+		// (Top 3 Parties and Projection)
+		const partySnapshot = await getDocs(collection(db, 'parties'));
+		let parties = [];
+		partySnapshot.forEach(doc => {
+			const partyData = doc.data();
+			parties.push({
+				name: partyData.PartyName,
+				votes: partyData.NationalVoteCount
+			});
+		});
+
+		// Sort parties by vote count 
+		parties.sort((a, b) => b.votes - a.votes);
+		const top3Parties = parties.slice(0, 3);
+		const lineChartData = [['Party', 'Votes']];
+		top3Parties.forEach(party => {
+			lineChartData.push([party.name, party.votes]);
+		});
+
+		// Fetch vote counts per province for the bar chart
+		const voteSnapshot = await getDocs(collection(db, 'votes'));
+		let provinces = {};
+		voteSnapshot.forEach(doc => {
+			const voteData = doc.data();
+			const province = voteData.Province;
+			if (provinces[province]) {
+				provinces[province]++;
+			} else {
+				provinces[province] = 1;
+			}
+		});
+
+		// (Votes per Province)
+		const provinceData = [['Province', 'Number of Voters']];
+		for (let province in provinces) {
+			provinceData.push([province, provinces[province]]);
+		}
+
+		google.charts.load('current', { packages: ['corechart', 'bar'] });
+		google.charts.setOnLoadCallback(() => {
+			// Bar Chart
+			const barData = google.visualization.arrayToDataTable(provinceData);
+			const barOptions = {
+				title: 'Voters per Province',
+				chartArea: { width: '50%' },
+				hAxis: {
+					title: 'Number of Voters',
+					minValue: 0,
+					textStyle: {
+						fontSize: 16  
+					}
+				},
+				vAxis: {
+					title: 'Province',
+					textStyle: {
+						fontSize: 16  
+					}
+				},
+				titleTextStyle: {
+					fontSize: 20,  
+					bold: true
+				}
+			};
+			const barChart = new google.visualization.BarChart(document.getElementById('barchart'));
+			barChart.draw(barData, barOptions);
+
+			// Line Chart 
+			const lineData = google.visualization.arrayToDataTable(lineChartData);
+			const lineOptions = {
+				title: 'Top 3 Parties and Projected Winner',
+				curveType: 'function',
+				legend: { position: 'bottom' },
+				pointSize: 5,
+				titleTextStyle: {
+					fontSize: 20,
+					bold: true
+				}
+			};
+			const lineChart = new google.visualization.LineChart(document.getElementById('linechart'));
+			lineChart.draw(lineData, lineOptions);
+		});
+	}
+
+	displayCharts();
 
 	// Code for countdown
 	async function initCountdown() {
@@ -479,7 +620,6 @@
 				const countDownDate = new Date(ongoingElection.EndDate.toDate()).getTime();
 				document.getElementById("wlcMsg").innerText = ongoingElection.ElectionName;
 
-				// Initialize the countdown timer
 				const x = setInterval(function () {
 					const currentTime = new Date().getTime();
 					const distance = countDownDate - currentTime;
@@ -572,3 +712,4 @@
 	setInterval(() => plusSlides2(1), 5000);
 	// End of SLides code
 </script>
+
