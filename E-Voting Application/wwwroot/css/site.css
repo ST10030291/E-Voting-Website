@@ -1537,8 +1537,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .party-table td img {
-        width: 80px;
-        height: 80px;
+        width: 170px;
+        height: 110px;
         border-radius: 10px;
         object-fit: cover;
     }
