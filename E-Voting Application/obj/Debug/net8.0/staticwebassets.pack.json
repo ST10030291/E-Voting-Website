@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\Images\\IEC_logo.png"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\ballot.jpg",
+      "PackagePath": "staticwebassets\\Images\\ballot.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\ballot_box.jpg",
+      "PackagePath": "staticwebassets\\Images\\ballot_box.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\checked_box.png",
+      "PackagePath": "staticwebassets\\Images\\checked_box.png"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\delete_icon.png",
       "PackagePath": "staticwebassets\\Images\\delete_icon.png"
     },
@@ -19,6 +31,10 @@
     {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\facebook_logo.jpg",
       "PackagePath": "staticwebassets\\Images\\facebook_logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\firebase_security.jpg",
+      "PackagePath": "staticwebassets\\Images\\firebase_security.jpg"
     },
     {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\hand_vote_box.png",
@@ -61,8 +77,16 @@
       "PackagePath": "staticwebassets\\Images\\twitter_logo.png"
     },
     {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\unchecked_box.png",
+      "PackagePath": "staticwebassets\\Images\\unchecked_box.png"
+    },
+    {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\user_icon.png",
       "PackagePath": "staticwebassets\\Images\\user_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\vote_station.jpg",
+      "PackagePath": "staticwebassets\\Images\\vote_station.jpg"
     },
     {
       "Id": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\Images\\voting_gif.gif",
