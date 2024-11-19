@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\electionmanagement\\votingrules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\electionmanagement\\votingrules.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\electionmanagement\\castvote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\electionmanagement\\castvote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\electionmanagement\\addelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\electionmanagement\\addelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\electionmanagement\\castvote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\electionmanagement\\castvote.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\electionmanagement\\addelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|solutionrelative:views\\electionmanagement\\addelection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3FFEF23-D1FD-464B-8428-3EACFBCFFCFD}|E-Voting Application.csproj|c:\\users\\avish\\onedrive\\desktop\\inf4001n_jdnavi001_electcode_2024\\e-voting application\\views\\userauth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -54,24 +54,25 @@
       "DocumentGroups": [
         {
           "DockedHeight": 326,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAAPAFAAAAAAAAAAAIwAMGAAASAAAA",
+              "ViewState": "AQIAADUGAAAAAAAAAAAIwFIGAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-11T18:14:37.372Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -84,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -97,26 +98,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "CastVote.cshtml",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\ElectionManagement\\CastVote.cshtml",
               "RelativeDocumentMoniker": "Views\\ElectionManagement\\CastVote.cshtml",
               "ToolTip": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\ElectionManagement\\CastVote.cshtml",
               "RelativeToolTip": "Views\\ElectionManagement\\CastVote.cshtml",
-              "ViewState": "AQIAAKoAAAAAAAAAAAAAALoAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T17:35:20.552Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "VotingRules.cshtml",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\ElectionManagement\\VotingRules.cshtml",
               "RelativeDocumentMoniker": "Views\\ElectionManagement\\VotingRules.cshtml",
               "ToolTip": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\ElectionManagement\\VotingRules.cshtml",
               "RelativeToolTip": "Views\\ElectionManagement\\VotingRules.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAUwCcAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-15T00:33:20.284Z",
               "IsPinned": true,
@@ -137,16 +139,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "AddElection.cshtml",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\ElectionManagement\\AddElection.cshtml",
               "RelativeDocumentMoniker": "Views\\ElectionManagement\\AddElection.cshtml",
               "ToolTip": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\ElectionManagement\\AddElection.cshtml",
               "RelativeToolTip": "Views\\ElectionManagement\\AddElection.cshtml",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAAAIsAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-13T21:17:07.002Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -154,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Vote.cs",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Models\\Vote.cs",
               "RelativeDocumentMoniker": "Models\\Vote.cs",
@@ -190,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "C:\\Users\\Avish\\OneDrive\\Desktop\\INF4001N_JDNAVI001_ElectCode_2024\\E-Voting Application\\Views\\Home\\Profile.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Profile.cshtml",

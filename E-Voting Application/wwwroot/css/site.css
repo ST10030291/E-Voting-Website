@@ -1598,3 +1598,74 @@ h1, h2, h3, h4, h5, h6 {
 .pie-chart-container {
     margin-bottom: 0px; 
 }
+
+/* Voting Rules Page*/
+
+.container6 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+.image-section6 {
+    flex: 1;
+}
+
+    .image-section6 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.content-section6 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-block6 {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .content-block6:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-block6 h2 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        color: #444;
+    }
+
+    .content-block6 p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #666;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container6 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .image-section6,
+    .content-section6 {
+        width: 100%;
+    }
+}
