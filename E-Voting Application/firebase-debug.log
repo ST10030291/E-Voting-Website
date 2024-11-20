@@ -1,0 +1,51 @@
+[debug] [2024-11-20T11:13:54.288Z] ----------------------------------------------------------------------
+[debug] [2024-11-20T11:13:54.290Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Avish\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-11-20T11:13:54.291Z] CLI Version:   13.26.0
+[debug] [2024-11-20T11:13:54.291Z] Platform:      win32
+[debug] [2024-11-20T11:13:54.291Z] Node Version:  v20.15.1
+[debug] [2024-11-20T11:13:54.291Z] Time:          Wed Nov 20 2024 13:13:54 GMT+0200 (South Africa Standard Time)
+[debug] [2024-11-20T11:13:54.291Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-20T11:13:54.297Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-20T11:13:54.297Z] > authorizing via signed-in user (avishj007@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Avish\OneDrive\Desktop\INF4001N_JDNAVI001_ElectCode_2024\E-Voting Application
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-20T11:14:05.478Z] Checked if tokens are valid: false, expires at: 1725541659238
+[debug] [2024-11-20T11:14:05.478Z] Checked if tokens are valid: false, expires at: 1725541659238
+[debug] [2024-11-20T11:14:05.479Z] > refreshing access token with scopes: []
+[debug] [2024-11-20T11:14:05.480Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-20T11:14:05.480Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-20T11:14:05.978Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-20T11:14:05.978Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-20T11:14:06.039Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-11-20T11:14:06.841Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-11-20T11:14:06.841Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project e-voting-application-b782e (E-Voting-Application) 
+[info] 
+=== Hosting Setup
+[debug] [2024-11-20T11:14:09.139Z] Checked if tokens are valid: true, expires at: 1732104844978
+[debug] [2024-11-20T11:14:09.139Z] Checked if tokens are valid: true, expires at: 1732104844978
+[debug] [2024-11-20T11:14:09.139Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/e-voting-application-b782e [none]
+[debug] [2024-11-20T11:14:09.493Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/e-voting-application-b782e 200
+[debug] [2024-11-20T11:14:09.493Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/e-voting-application-b782e {"projectId":"e-voting-application-b782e","projectNumber":"942000114372","displayName":"E-Voting-Application","name":"projects/e-voting-application-b782e","resources":{"hostingSite":"e-voting-application-b782e","realtimeDatabaseInstance":"e-voting-application-b782e-default-rtdb"},"state":"ACTIVE","etag":"1_ca7762c1-46ff-4f4c-b890-3347f560530a"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
