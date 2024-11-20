@@ -13,7 +13,7 @@ and the color pallete is consistent with the IEC brand and a modern and simple a
 #### Election Platform Link
 
 #### GitHub Link
-
+https://github.com/ST10030291/E-Voting-Website.git
 #### LinkedIn 
 https://www.linkedin.com/in/avish-judnarain-5b8430251/
 
@@ -21,8 +21,8 @@ https://www.linkedin.com/in/avish-judnarain-5b8430251/
 
 ## 2. Table of Contents
 - [Overview](#1-overview)
-- - [Features](#3-technologies-used)
-- [Getting Started](#4-features)
+- [Technologies Used](#3-technologies-used)
+- [Features](#4-features)
 - [Class Diagram](#5-class-diagram)
 - [Conclusion](#6-conclusion)
 ---
