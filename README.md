@@ -9,7 +9,7 @@ All party vote counts where populated to simulate similar recent elections. For 
 The App makes use of international coding standards by using references, comments and error handling. I decided not to use a template and code the website from stracth as it would be easier to find my css code etc. I choose to make an unofficial IEC voting platform
 and the color pallete is consistent with the IEC brand and a modern and simple approach was taken, it was crucial not to over complicate annimations, voting rules etc as an important factor of this website is accessibility especially for all age groups.
 ##### YouTube Link (Application Demonstration) 
-
+https://youtu.be/Epd0XEr8Wrw
 #### Election Platform Link
 https://e-votingapplication20241120141828.azurewebsites.net
 
