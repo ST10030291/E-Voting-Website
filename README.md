@@ -11,6 +11,9 @@ and the color pallete is consistent with the IEC brand and a modern and simple a
 ##### YouTube Link (Application Demonstration) 
 
 #### Election Platform Link
+https://e-votingapplication20241120141828.azurewebsites.net
+
+The application was hosted and published using Microsoft Azure since it is a C# Web App using the .NET framework. I chose this method and to use cshtml files since I have alot of experience making web apps with CRUD features this way but with C# instead of JavaScript, Priority queues , triggers etc. 
 
 #### GitHub Link
 https://github.com/ST10030291/E-Voting-Website.git
@@ -78,3 +81,16 @@ Apart from the normal polls and rankings Nationally and Provincially, stats in t
 ## 5. Class Diagram
 ---
 ## 6. Conclusion
+
+### REFERENCES FOR APPLICATION
+REFERENCES -->
+HTML Introduction** - Learn the basics of HTML, the standard language for creating web pages. [W3Schools](https://www.w3schools.com/html/) 
+CSS Tutorial** - Dive into the fundamentals of CSS for styling and layout in web development. [W3Schools](https://www.w3schools.com/css/) 
+JavaScript Tutorial** - Understand the basics of JavaScript for adding interactivity to your web pages. [W3Schools](https://www.w3schools.com/js/) 
+HTML Forms and Firebase** - Learn how to create forms and integrate them with Firebase for data storage. [W3Schools](https://www.w3schools.com/html/html_forms.asp)  
+CSS Grid Layout** - Master CSS grid to create responsive web layouts. [W3Schools](https://www.w3schools.com/css/css_grid.asp) 
+Firebase Hosting with HTML and JS** - A tutorial on hosting static HTML, CSS, and JS projects on Firebase. [Firebase](https://firebase.google.com/docs/hosting) 
+JavaScript Fetch API** - Use the Fetch API to connect your front-end with Firebase for data operations. [W3Schools](https://www.w3schools.com/js/js_api_fetch.asp)  
+Responsive Web Design** - Learn how to make your web apps mobile-friendly. [W3Schools](https://www.w3schools.com/css/css_rwd_intro.asp) 
+Firebase Authentication** - Implement user login and signup functionality using Firebase Authentication. [Firebase](https://firebase.google.com/docs/auth) 
+JavaScript ES6 Features** - Explore modern JavaScript features for cleaner and more efficient code. [W3Schools](https://www.w3schools.com/js/js_es6.asp) 
