@@ -79,8 +79,18 @@ Apart from the normal polls and rankings Nationally and Provincially, stats in t
 ---
 
 ## 5. Class Diagram
----
+Attached in Zip File.
+--- 
 ## 6. Conclusion
+I'd like to thank the whole UCT Commerce faculty for their help and communication leading up to this exam as well as considering me for placement. Thank you for this amazing opportunity.
+As much as I did give my all that I could during this assignment I do feel like there was so much more extra I could add to this application ontop of all the requirements and bonus requirements
+but unfortunetly the assignment fell during my current unis exams. I am still confident I have completed all the requirements and bonus requirements and look forward to your feedback.
+Thank you again for this opportunity.
+
+A funny side note, I actually had this exact same idea for my hackathon at campus this year, last year we came up with an e-commerce website similar to One Cart today. 
+Unfortunetly due to amount of third year work my team also couldnt make it to take part in this years hackathon but I remember smiling when I saw the assignment
+requirements because a month ago I came up with the idea with my usual hackathon group and told them about it. I am glad now knowing I have accomplished what 
+I wanted to do but myself. :)
 
 ### REFERENCES FOR APPLICATION
 HTML Introduction - Learn the basics of HTML, the standard language for creating web pages. [W3Schools](https://www.w3schools.com/html/) 
