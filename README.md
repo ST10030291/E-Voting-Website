@@ -20,6 +20,10 @@ https://github.com/ST10030291/E-Voting-Website.git
 #### LinkedIn 
 https://www.linkedin.com/in/avish-judnarain-5b8430251/
 
+#### Admin Details of existing account
+email - avishjudnarain19@gmail.com
+ID - 1234567891234
+password - 123456
 ---
 
 ## 2. Table of Contents
